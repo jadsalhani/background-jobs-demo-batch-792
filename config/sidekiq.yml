@@ -1,0 +1,11 @@
+:concurrency: 3 # Number of workers available
+:timeout: 60 # After 60 seconds, drop the task if it takes longer in processing
+:verbose: true # Wordy logs, with a lot of info
+:queues:
+  # Queue priority:
+  # https://github.com/mperham/sidekiq/wiki/Advanced-Options
+  # https://mikerogers.io/2019/06/06/rails-6-sidekiq-queues
+  - critical
+  - smart_queue
+  - regular_queue
+  - default
